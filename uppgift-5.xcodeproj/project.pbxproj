@@ -15,7 +15,7 @@
 		39581BCC2AE7A88500D8A68D /* uppgift_5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39581BCB2AE7A88500D8A68D /* uppgift_5UITests.swift */; };
 		39581BCE2AE7A88500D8A68D /* uppgift_5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39581BCD2AE7A88500D8A68D /* uppgift_5UITestsLaunchTests.swift */; };
 		39581BDD2AE7E7B000D8A68D /* SimpleAnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39581BDC2AE7E7B000D8A68D /* SimpleAnimalModel.swift */; };
-		3997EC4F2AE7FFBD00953A31 /* SimpleAnimalNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3997EC4E2AE7FFBD00953A31 /* SimpleAnimalNet.mlmodel */; };
+		39AE35AD2AE93832004C5FFA /* SimpleAnimalNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 39AE35AC2AE93832004C5FFA /* SimpleAnimalNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		39581BCB2AE7A88500D8A68D /* uppgift_5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uppgift_5UITests.swift; sourceTree = "<group>"; };
 		39581BCD2AE7A88500D8A68D /* uppgift_5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uppgift_5UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		39581BDC2AE7E7B000D8A68D /* SimpleAnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAnimalModel.swift; sourceTree = "<group>"; };
-		3997EC4E2AE7FFBD00953A31 /* SimpleAnimalNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SimpleAnimalNet.mlmodel; path = "uppgift-5/Models/SimpleAnimalNet.mlmodel"; sourceTree = "<group>"; };
+		39AE35AC2AE93832004C5FFA /* SimpleAnimalNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SimpleAnimalNet.mlmodel; path = Models/SimpleAnimalNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,6 @@
 		39581BA42AE7A88200D8A68D = {
 			isa = PBXGroup;
 			children = (
-				3997EC4E2AE7FFBD00953A31 /* SimpleAnimalNet.mlmodel */,
 				39581BAF2AE7A88200D8A68D /* uppgift-5 */,
 				39581BC02AE7A88400D8A68D /* uppgift-5Tests */,
 				39581BCA2AE7A88500D8A68D /* uppgift-5UITests */,
@@ -99,6 +98,7 @@
 		39581BAF2AE7A88200D8A68D /* uppgift-5 */ = {
 			isa = PBXGroup;
 			children = (
+				39AE35AC2AE93832004C5FFA /* SimpleAnimalNet.mlmodel */,
 				39581BB02AE7A88200D8A68D /* uppgift_5App.swift */,
 				39581BB22AE7A88200D8A68D /* ContentView.swift */,
 				39581BDC2AE7E7B000D8A68D /* SimpleAnimalModel.swift */,
@@ -265,7 +265,7 @@
 			files = (
 				39581BB32AE7A88200D8A68D /* ContentView.swift in Sources */,
 				39581BB12AE7A88200D8A68D /* uppgift_5App.swift in Sources */,
-				3997EC4F2AE7FFBD00953A31 /* SimpleAnimalNet.mlmodel in Sources */,
+				39AE35AD2AE93832004C5FFA /* SimpleAnimalNet.mlmodel in Sources */,
 				39581BDD2AE7E7B000D8A68D /* SimpleAnimalModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

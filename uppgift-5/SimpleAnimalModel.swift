@@ -10,26 +10,30 @@ import Foundation
 import UIKit
 
 class MobileNetModel {
-    let debug = true
+    // TODO The asset image set two is identified as an elephant in the preview of the model.
+    // TODO However, the code here identifies a cat with the same elephant image.
+    let debug = false
     
     func predictImage(imageset_name: String) -> String {
         var result: String = ""
-        
+
         // Create an instance of the image classifier's wrapper class or return optional nil
         if let imageClassifierWrapper = try? SimpleAnimalNet(configuration: MLModelConfiguration()) {
-            // Model size rgb: 299, 299, 3
+            // Model size rgb: w, h, 3
             if let theimage = UIImage(named: imageset_name) {
                 let theimageBuffer = buffer(from: theimage)!
-                if let output = try? imageClassifierWrapper.prediction(image: theimageBuffer) {
+                do {
+                    let output = try imageClassifierWrapper.prediction(image: theimageBuffer)
                     result = output.classLabel + " probablity: "
                         + String(format: "%.1f", 100 * output.classLabelProbs[output.classLabel]!) + "%\n"
                         + "imageset: " + imageset_name + "\n"
                     if (debug) {
+                        result += "Debug w and h: " + String(format: "%.1f", theimage.size.width) + " " + String(format: "%.1f", theimage.size.height) + "\n"
                         for (animal, probability) in output.classLabelProbs {
                             result += "Debug " + animal + ": " + String(format: "%.3f", probability) + "\n"
                         }
                     }
-                } else {
+                } catch {
                     // Model prediction failure
                     result = "Exception imageClassifierWrapper.prediction"
                 }
