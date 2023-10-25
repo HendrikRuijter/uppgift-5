@@ -11,6 +11,7 @@
 3. Använd kod från förra veckan för att använda modell i ett projekt. DONE
 4. Lägg in helt annan bild i projeket av samma typ som du tränat på. Gör så vid tryck på knapp så skriver den ut på resultat på text på skärmen. DONE
 5. Lägg up projektet publikt på github och klista in länk nedan.
+ https://github.com/HendrikRuijter/uppgift-5/tree/main/uppgift-5
  */
 
 import SwiftUI
