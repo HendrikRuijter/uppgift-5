@@ -6,21 +6,42 @@
 //
 
 /**
- Skapa nytt projekt i Xcode.
- Skapa egen modell i CreateML för image classify enligt video och länk. Kan använda exempelbilder eller själv plocka ner bilder för träning.
- Använd kod från förra veckan för att använda modell i ett projekt. Lägg in helt annan bild i projeket av samma typ som du tränat på. Gör så vid tryck på knapp så skriver den ut på resultat på text på skärmen.
- Lägg up projektet publikt på github och klista in länk nedan.
+1. Skapa nytt projekt i Xcode. DONE
+2. Skapa egen modell i CreateML för image classify enligt video och länk. Kan använda exempelbilder eller själv plocka ner bilder för träning. DONE
+3. Använd kod från förra veckan för att använda modell i ett projekt. DONE
+4. Lägg in helt annan bild i projeket av samma typ som du tränat på. Gör så vid tryck på knapp så skriver den ut på resultat på text på skärmen.
+5. Lägg up projektet publikt på github och klista in länk nedan.
  */
 
 import SwiftUI
 
 struct ContentView: View {
+    @State var result = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("MobileNet v2 Model")
+            Spacer()
+            Button(action: {
+                let mobile_net_model = MobileNetModel()
+                result = mobile_net_model.predictImage(imageset_name: "one")
+            }) {
+                Text("Animal")
+                    .font(.title2)
+                    .padding()
+            }
+            Button(action: {
+                let mobile_net_model = MobileNetModel()
+                result = mobile_net_model.predictImage( imageset_name: "two")
+            }) {
+                Text("Another Animal")
+                    .font(.title2)
+                    .padding()
+            }
+            Spacer()
+            Text(result)
+                .font(.title3)
+                .multilineTextAlignment(.center)
         }
         .padding()
     }
