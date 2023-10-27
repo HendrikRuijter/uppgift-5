@@ -17,28 +17,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var result = ""
+    @State var imageset = ""
+    @State var model = Model()
     
     var body: some View {
         VStack {
             Text("Created Cat/Elephant Model")
             Button(action: {
-                let mobile_net_model = MobileNetModel()
-                result = mobile_net_model.predictImage(imageset_name: "one")
+                imageset = "one"
             }) {
                 Text("Animal")
                     .font(.title2)
                     .padding()
             }
             Button(action: {
-                let mobile_net_model = MobileNetModel()
-                result = mobile_net_model.predictImage( imageset_name: "two")
+               imageset = "two"
             }) {
                 Text("Another Animal")
                     .font(.title2)
                     .padding()
             }
-            Text(result)
+            Text(model.predictImage(imageset_name: imageset))
                 .font(.title3)
                 .multilineTextAlignment(.center)
         }
